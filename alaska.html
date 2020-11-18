@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+	
+<title>Adventuretime</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="destinations.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+  function setHotel(hotelID) {
+     switch (hotelID) {
+      case 'ak_001': 
+        localStorage.setItem("hotelID", "ak_001");
+        localStorage.setItem("hotelName", "Aurora Villa ");
+        localStorage.setItem("hotelImage", "hotel_ak_aurora_villa.jpg");
+        localStorage.setItem("hotelClass", "5");
+        break;
+      case 'ak_002':
+        localStorage.setItem("hotelID", "ak_002");
+        localStorage.setItem("hotelName", "Sitka Hotel and Restaurant");
+        localStorage.setItem("hotelImage", "hotel_ak_sitka.jpg");
+        localStorage.setItem("hotelClass", "5");
+        break;
+      case 'ak_003':
+        localStorage.setItem("hotelID", "ak_003");
+        localStorage.setItem("hotelName", "Driftwood Hotel");
+        localStorage.setItem("hotelImage", "hotel_ak_driftwood.jpg");
+        localStorage.setItem("hotelClass", "4");
+        break;
+        }
+  }
+</script>
+
+</head>
+
+ 
+
+<body> 
+  <!--
+  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
+-->
+  <!-------- Navigation bar---------->
+    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
+
+  <section id="nav-bar">
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <a href="#contact">TRIP GUIDES</a>
+    <a class="active" href="destinations.html">DESTINATIONS</a>
+    <a href="#about">ROAD PLANNER</a>
+    <a href="#about">BLOG POSTS</a>
+    <a href="#about">LOCATION</a>
+    <a href="#about">FEEDBACK</a>
+    <a href="#about">LOGIN</a>
+  </div> 
+</section>
+
+<!---------DENSTINATIONS---->
+<section id="destinations" style="margin: 35px;">
+  <div class="destinations">
+  <h1><b>Alaska Hotels</b></h1><p>
+  <table sytle=border-spacing: 25px;>
+       <tr>
+        <td><a href="reserve_hotel.html" onclick="setHotel('ak_001')"> <img alt="Fairmont Hotel" src="images/hotel_ak_aurora_villa.jpg" height="200" width="300"><p>
+        <span class="continent">Fairbanks</span><br>
+        <span class="state">Aurora Villa</span></a></td>
+        <td><a href="reserve_hotel.html" onclick="setHotel('ak_002')"> <img alt="Hyatt" src="images/hotel_ak_sitka.jpg" height="200" width="300"><p>
+        <span class="continent">Sitka</span><br>
+        <span class="state">Sitka Hotel and Restaurant</span></a></td>   
+        <td><a href="reserve_hotel.html" onclick="setHotel('ak_003')"> <img alt="St Regis" src="images/hotel_ak_driftwood.jpg" height="200" width="300"><p>
+        <span class="continent">Juneau</span><br>
+        <span class="state">Driftwood Hotel</span></a></td>   
+        </tr>     
+  </table>
+</div> 
+  
+</section>
+<!---------DENSITIONATIONS---->
+

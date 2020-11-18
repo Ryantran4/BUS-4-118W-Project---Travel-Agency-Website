@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html><head>
+	
+<title>Adventuretime</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="reserveHotel.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+ 
+
+<body> 
+  <script type="text/javascript">
+  
+    function makeReserv(){
+        /*
+    var item01Qty = parseFloat(document.getElementById("item01").value);
+    var item02Qty = parseFloat(document.getElementById("item02").value);
+    var item03Qty = parseFloat(document.getElementById("item03").value);
+    var grossSales = item01Qty*50 + item02Qty*150 + item03Qty*250
+    var totalEarn = 750 + grossSales*0.0925
+    window.alert("Salesperson's earnings for \n" +
+                  "sale of $" + grossSales.toFixed(2) + " is $750 for week \n" +
+                  "plus 9.25% of commission is \n" +
+                  "$" + totalEarn.toFixed(2));
+                  */
+    window.alert("This is where a receipt will go");
+    }
+  </script>
+
+
+  <section id="nav-bar">
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <a href="#contact">TRIP GUIDES</a>
+    <a class="active" href="destinations.html">DESTINATIONS</a>
+    <a href="#about">ROAD PLANNER</a>
+    <a href="#about">BLOG POSTS</a>
+    <a href="#about">LOCATION</a>
+    <a href="#about">FEEDBACK</a>
+    <a href="#about">LOGIN</a>
+  </div> 
+</section>
+
+<!---------RESERVE ROOM---->
+<section id="destinations" style="margin: 35px;">
+  <div class="destinations">
+
+<table>
+  <tr><td><h3><b>
+      <script>
+        document.write(localStorage.getItem("hotelName"));
+        </script></h3></b>
+    </td></tr>
+    <tr><td>
+      <script>
+          document.write('<img src="images/' + localStorage.getItem("hotelImage") + '" height="300">');
+        </script>
+    </td></tr>
+</table>
+<form onsubmit="makeReserv()" class="form">
+  <!--  Reservation Information -->
+
+  <div class="form-group">
+    <h1 class="heading">Reservation Details</h1>
+        <label for="arriveDate" class="label"></i>Arrive Date:</label>
+        <input type="date" id="arriveDate" class="box" name="arrive" required></p>
+        <label for="departDate" class="label"></i>Depart Date:</label>
+        <input type="date" id="departDate" class="box" name="depart" required> </p> 
+        <label for="departDate" class="label"></i>Guests:</label>
+        <select id="numberOfGuests" class="box" name="NumberOfGuests" required>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </p> 
+        <label for="roomType" class="label"></i>Room Type:</label>
+        <select id="roomType" class="box" name="roomType" required>
+          <option value="1">1 Room: 1 King Bed - Rate: $100</option>
+          <option value="2">1 Room: 2 Double Beds - Rate: $200</option>
+          <option value="3">Studio Suite: 2 Double Beds - Rate: $300</option>
+          <option value="4">2 Room Suite: 2 Double Beds - Rate: $400</option>
+          <option value="5">Penthouse Suite: 4 King Beds - Rate: $500</option>
+        </select>
+      </p> 
+        <label for="comments" class="commentLabel">Please describe your special needs e.g. Extra pillows, late check-in, etc.</label><br>
+          <textarea name="comments" class="box" id="comments" rows="4" cols="50"></textarea><br>      </p> 
+    <!-- Booking Details -->
+  </p> 
+  <!-- /.form-group -->
+</p> 
+    <h1 class="heading">Booking & Contact Information</h1></p>
+    <label for="name" >Name: </label>
+    <input type="text" id="name" class="label" name="name" size="40" required>
+     </p>
+    <label for="address" >Address: </label>
+    <input type="text" id="address" class="label" name="address" size="50" required>
+     </p>
+     <label for="city">City: </label>
+      <input type="text" id="city" class="label" name="city" size="30" required>
+      <label for="state">State: </label>
+      <select name="state">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="AR">AR</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DE">DE</option>
+        <option value="DC">DC</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="IA">IA</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="ME">ME</option>
+        <option value="MD">MD</option>
+        <option value="MA">MA</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MS">MS</option>
+        <option value="MO">MO</option>
+        <option value="MT">MT</option>
+        <option value="NE">NE</option>
+        <option value="NV">NV</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NY">NY</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VT">VT</option>
+        <option value="VA">VA</option>
+        <option value="WA">WA</option>
+        <option value="WV">WV</option>
+        <option value="WI">WI</option>
+        <option value="WY">WY</option>
+      </select>
+      <label for="zip">Zip: </label>
+      <input type="text" id="zip" class="label" name="zip" size="9" required>
+    </p>
+    <label for="phone">Phone: </label>
+     <input type="tel" id="phone" class="label" name="phone" size="16" required></p>
+     <input type="Submit" value ="Make Reservation">   
+</form>
+</div> 
+  
+</section>
+<!---------DENSITIONATIONS---->
+

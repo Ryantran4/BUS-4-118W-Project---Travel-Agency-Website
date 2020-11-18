@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+	
+<title>Adventuretime</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="destinations.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+  function setHotel(hotelID) {
+     switch (hotelID) {
+      case 'ch_001': 
+        localStorage.setItem("hotelID", "ch_001");
+        localStorage.setItem("hotelName", "Temple House Hotel ");
+        localStorage.setItem("hotelImage", "hotel_ch_temple_house.jpg");
+        localStorage.setItem("hotelClass", "5");
+        break;
+      case 'ch_002':
+        localStorage.setItem("hotelID", "ch_002");
+        localStorage.setItem("hotelName", "China World Hotel");
+        localStorage.setItem("hotelImage", "hotel_ch_china_world.jpg");
+        localStorage.setItem("hotelClass", "8");
+        break;
+      case 'ch_003':
+        localStorage.setItem("hotelID", "ch_003");
+        localStorage.setItem("hotelName", "Harbour Grand");
+        localStorage.setItem("hotelImage", "hotel_ch_harbour_grand.jpg");
+        localStorage.setItem("hotelClass", "6");
+        break;
+        }
+  }
+</script>
+
+</head>
+
+ 
+
+<body> 
+  <!--
+  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
+-->
+  <!-------- Navigation bar---------->
+    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
+
+  <section id="nav-bar">
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <a href="#contact">TRIP GUIDES</a>
+    <a class="active" href="destinations.html">DESTINATIONS</a>
+    <a href="#about">ROAD PLANNER</a>
+    <a href="#about">BLOG POSTS</a>
+    <a href="#about">LOCATION</a>
+    <a href="#about">FEEDBACK</a>
+    <a href="#about">LOGIN</a>
+  </div> 
+</section>
+
+<!---------DENSTINATIONS---->
+<section id="destinations" style="margin: 35px;">
+  <div class="destinations">
+  <h1><b>China Hotels</b></h1><p>
+  <table sytle=border-spacing: 25px;>
+       <tr>
+        <td><a href="reserve_hotel.html" onclick="setHotel('ch_001')"> <img alt="Temple House Hotel" src="images/hotel_ch_temple_house.jpg" height="200" width="300"><p>
+        <span class="continent">Chengdu</span><br>
+        <span class="state">Temple House</span></a></td>
+        <td><a href="reserve_hotel.html" onclick="setHotel('ch_002')"> <img alt="China World Hotel" src="images/hotel_ch_china_world.jpg" height="200" width="300"><p>
+        <span class="continent">Beijing</span><br>
+        <span class="state">China World Hotel</span></a></td>   
+        <td><a href="reserve_hotel.html" onclick="setHotel('ch_003')"> <img alt="Harbour Grand" src="images/hotel_ch_harbour_grand.jpg" height="200" width="300"><p>
+        <span class="continent">Hong Kong</span><br>
+        <span class="state">Harbour Grand</span></a></td>   
+        </tr>     
+  </table>
+</div> 
+  
+</section>
+<!---------DENSITIONATIONS---->
+

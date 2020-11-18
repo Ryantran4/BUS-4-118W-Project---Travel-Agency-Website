@@ -1,0 +1,40 @@
+
+/* Add a dark background color to the top navigation */
+.destinations{
+    background-color :white;
+    overflow: hidden;
+    }
+
+.destinations table {
+  border-collapse: separate;
+      border-spacing: 25px;
+    }
+
+  .destinations  td {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    /* Style the links inside the navigation bar */
+    .continent {
+      float: left;
+      color: #6b6969;
+      text-align: left;
+
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .state {
+      float: left;
+      color: #0a0a0a;
+      text-align: left;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  
+  
+  /* Change the color of links when user hover over them */
+  .state:hover {
+    color:#5575af;
+  }
+  

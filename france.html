@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+	
+<title>Adventuretime</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="destinations.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+  function setHotel(hotelID) {
+     switch (hotelID) {
+      case 'fr_001': 
+        localStorage.setItem("hotelID", "fr_001");
+        localStorage.setItem("hotelName", "Pullman Hotel ");
+        localStorage.setItem("hotelImage", "hotel_fr_pullman.jpg");
+        localStorage.setItem("hotelClass", "8");
+        break;
+      case 'fr_002':
+        localStorage.setItem("hotelID", "fr_2");
+        localStorage.setItem("hotelName", "Hotel Du Palais");
+        localStorage.setItem("hotelImage", "hotel_fr_du_palais.jpg");
+        localStorage.setItem("hotelClass", "8");
+        break;
+      case 'fr_003':
+        localStorage.setItem("hotelID", "fr_003");
+        localStorage.setItem("hotelName", "Les Chalets du Mont dArbois");
+        localStorage.setItem("hotelImage", "hotel_fr_les_chalets_du_mont_darbois.jpg");
+        localStorage.setItem("hotelClass", "9");
+        break;
+        }
+  }
+</script>
+
+</head>
+
+ 
+
+<body> 
+  <!--
+  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
+-->
+  <!-------- Navigation bar---------->
+    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
+
+  <section id="nav-bar">
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <a href="#contact">TRIP GUIDES</a>
+    <a class="active" href="destinations.html">DESTINATIONS</a>
+    <a href="#about">ROAD PLANNER</a>
+    <a href="#about">BLOG POSTS</a>
+    <a href="#about">LOCATION</a>
+    <a href="#about">FEEDBACK</a>
+    <a href="#about">LOGIN</a>
+  </div> 
+</section>
+
+<!---------DENSTINATIONS---->
+<section id="destinations" style="margin: 35px;">
+  <div class="destinations">
+  <h1><b>France Hotels</b></h1><p>
+  <table sytle=border-spacing: 25px;>
+       <tr>
+        <td><a href="reserve_hotel.html" onclick="setHotel('fr_001')"> <img alt="Pullman" src="images/hotel_fr_pullman.jpg" height="200" width="300"><p>
+        <span class="continent">Paris</span><br>
+        <span class="state">Pullman Hotel</span></a></td>
+        <td><a href="reserve_hotel.html" onclick="setHotel('fr_002')"> <img alt="Hotel Du Palais" src="images/hotel_fr_du_palais.jpg" height="200" width="300"><p>
+        <span class="continent">Biarritz</span><br>
+        <span class="state">Hotel Du Palais</span></a></td>   
+        <td><a href="reserve_hotel.html" onclick="setHotel('fr_003')"> <img alt="Les Chalets du Mont d'Arbois" src="images/hotel_fr_les_chalets_du_mont_darbois.jpg" height="200" width="300"><p>
+        <span class="continent">Megeve</span><br>
+        <span class="state">Les Chalets du Mont d'Arbois</span></a></td>   
+        </tr>     
+  </table>
+</div> 
+  
+</section>
+<!---------DENSITIONATIONS---->
+

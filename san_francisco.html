@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html><head>
+	
+<title>Adventuretime</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="destinations.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+  function setHotel(hotelID) {
+     switch (hotelID) {
+      case 'sf_001': 
+        localStorage.setItem("hotelID", "sf_001");
+        localStorage.setItem("hotelName", "San Francisco Fairmont ");
+        localStorage.setItem("hotelImage", "hotel_sf_fairmont.jpg");
+        localStorage.setItem("hotelClass", "10");
+        break;
+      case 'sf_002':
+        localStorage.setItem("hotelID", "sf_002");
+        localStorage.setItem("hotelName", "Hyatt Regency Embarcadro ");
+        localStorage.setItem("hotelImage", "hotel_sf_hyatt.jpg");
+        localStorage.setItem("hotelClass", "9");
+        break;
+      case 'sf_003':
+        localStorage.setItem("hotelID", "sf_003");
+        localStorage.setItem("hotelName", "St Regis ");
+        localStorage.setItem("hotelImage", "hotel_sf_st_regis.jpg");
+        localStorage.setItem("hotelClass", "9");
+        break;
+        }
+  }
+</script>
+
+</head>
+
+ 
+
+<body> 
+  <!--
+  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
+-->
+  <!-------- Navigation bar---------->
+    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
+
+  <section id="nav-bar">
+  <div class="topnav">
+    <a href="homepage.html">HOME</a>
+    <a href="#contact">TRIP GUIDES</a>
+    <a class="active" href="destinations.html">DESTINATIONS</a>
+    <a href="#about">ROAD PLANNER</a>
+    <a href="#about">BLOG POSTS</a>
+    <a href="#about">LOCATION</a>
+    <a href="#about">FEEDBACK</a>
+    <a href="#about">LOGIN</a>
+  </div> 
+</section>
+
+<!---------DENSTINATIONS---->
+<section id="destinations" style="margin: 35px;">
+  <div class="destinations">
+  <h1><b>San Francisco Hotels</b></h1><p>
+  <table sytle=border-spacing: 25px;>
+       <tr>
+        <td><a href="reserve_hotel.html" onclick="setHotel('sf_001')"> <img alt="Fairmont Hotel" src="images/hotel_sf_fairmont.jpg" height="200" width="300"><p>
+        <span class="continent">San Francisco</span><br>
+        <span class="state">Fairmont</span></a></td>
+        <td><a href="reserve_hotel.html" onclick="setHotel('sf_002')"> <img alt="Hyatt" src="images/hotel_sf_hyatt.jpg" height="200" width="300"><p>
+        <span class="continent">San Francisco</span><br>
+        <span class="state">Hyatt Regency Embarcadero</span></a></td>   
+        <td><a href="reserve_hotel.html" onclick="setHotel('sf_003')"> <img alt="St Regis" src="images/hotel_sf_st_regis.jpg" height="200" width="300"><p>
+        <span class="continent">San Francisco</span><br>
+        <span class="state">St Regis</span></a></td>   
+        </tr>     
+  </table>
+</div> 
+  
+</section>
+<!---------DENSITIONATIONS---->
+
