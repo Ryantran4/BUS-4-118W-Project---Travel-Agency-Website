@@ -14,30 +14,25 @@
 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+<!--
+  get the Top Menu (topnam.html) file and include it into this html using jQuery
+-->
+<script> 
+  $(function(){
+    $("#includedTopMenu").load("topnav.html"); 
+  });
+  </script> 
 
 </head>
 
  
 
 <body> 
-  <!--
-  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
--->
-  <!-------- Navigation bar---------->
-    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
 
-  <div class="topnav">
-    <a class="active" href="homepage.html">HOME</a>
-    <a href="#contact">TRIP GUIDES</a>
-    <a href="destinations.html">DESTINATIONS</a>
-    <a href="#about">ROAD PLANNER</a>
-    <a href="#about">BLOG POSTS</a>
-    <a href="#about">LOCATION</a>
-    <a href="#about">FEEDBACK</a>
-    <a href="#about">LOGIN</a>
-  </div> 
+  <!---------TOP MENU---->
+  
+  <div id="includeTopMenu"></div>
 
-<section id="nav-bar">
 
 </section>
 <!---------SLIDE IMAGES---->
