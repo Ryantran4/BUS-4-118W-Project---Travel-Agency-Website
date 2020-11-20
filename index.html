@@ -17,6 +17,8 @@
 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
 </head>
 
  
@@ -25,16 +27,18 @@
 
   <!---------TOP MENU---->
   
+  <div class="topnav" w3-include-html="content.html"></div> 
 
-
-<iframe src="topnav.html" style="border:none;" Width="100%"></iframe>
+  <script>
+    w3IncludeHTML();
+    </script>
 
 </section>
 <!---------SLIDE IMAGES---->
 <div style="z-index:100; position: absolute;">
   <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
 </div>
-<div id="slider" style="z-index:-1;"">
+<div id="slider" style="z-index:-1;">
     <div id="headerSlider" class="carousel slide pointer-event" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
