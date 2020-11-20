@@ -17,6 +17,13 @@
 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+<script>
+  $(document).ready(function(){
+     
+     $('#content').load("/topnav.html");
+  
+  });
+  </script>
 <!--
   get the Top Menu (topnam.html) file and include it into this html using jQuery
 -->
@@ -31,6 +38,13 @@
   
   <div id="includedTopMenu"></div>
 
+  <div id="content"></div>
+
+<b>Successful Response (should be blank):</b>
+<div id="success"></div>
+<b>Error Response:</b>
+<div id="error"></div>
+
   <script type="text/javascript">
     $(document).ready(function(){
        if (jQuery) {  
@@ -42,8 +56,16 @@
        }
     });
   </script>
+  <script>
+    $( "#success" ).load( "topnav.html", function( response, status, xhr ) {
+      if ( status == "error" ) {
+        var msg = "Sorry but there was an error: ";
+        $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+      }
+    });
+    </script>
   <script> 
-    $( "#includedTopMenu" ).load( "topnav.html" ); 
+    $( "#includedTopMenu" ).load( "/topnav.html" ); 
 </script> 
 
 </section>
