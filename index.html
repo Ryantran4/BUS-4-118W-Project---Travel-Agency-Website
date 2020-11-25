@@ -18,14 +18,18 @@
 
 <body> 
 
-  <!---------TOP MENU---->
+<!---------TOP MENU---->
   <section id="nav-bar">
-    <div class="topnav"></div>
+    <div id="menuGoesHere"></div>
 </section>
-<script>$(".topnav").load("topnav.html");
-$("#myLink_33").attr("href", "javascript:toggleMe(0);");
-
+    <!-- load the top menu from a separate html file using jQuery .load 
+         and then set the class of the current option to active using JQuery .attr -->
+<script>
+$("#menuGoesHere").load("topnav.html", function(){
+  $("#menuHome").attr("class", "active"); 
+});
 </script>
+
 
 
 <!---------SLIDE IMAGES---->
@@ -69,7 +73,8 @@ $("#myLink_33").attr("href", "javascript:toggleMe(0);");
       </a>
     </div>
     </div>
- 
+    <script>$("#home").attr("class", "active");  </script>
+    <script>$("#home").toggleClass("active"); </script>
       </body> 
       </html>
   
