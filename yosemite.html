@@ -38,24 +38,20 @@
  
 
 <body> 
-  <!--
-  <a ref="homepage"><img alt="W3Schools" src="adventuretime_logo.png" height="200"></a>
--->
-  <!-------- Navigation bar---------->
-    <!--a class="navbar-brand" href="#"><img src="LOGO.jpg.png" ></a -->
 
-  <section id="nav-bar">
-  <div class="topnav">
-    <a href="homepage.html">HOME</a>
-    <a href="#contact">TRIP GUIDES</a>
-    <a class="active" href="destinations.html">DESTINATIONS</a>
-    <a href="#about">ROAD PLANNER</a>
-    <a href="#about">BLOG POSTS</a>
-    <a href="#about">LOCATION</a>
-    <a href="#about">FEEDBACK</a>
-    <a href="#about">LOGIN</a>
-  </div> 
+  
+<!---------TOP MENU---->
+<section id="nav-bar">
+  <div id="menuGoesHere"></div>
 </section>
+  <!-- load the top menu from a separate html file (topnav.html) 
+       using the jQuery .load function
+       and then set the class of the current option to active using JQuery .attr -->
+<script>
+$("#menuGoesHere").load("topnav.html", function(){
+  $("#menuHome").attr("class", "active"); 
+});
+</script>
 
 <!---------DENSTINATIONS---->
 <section id="destinations" style="margin: 35px;">
