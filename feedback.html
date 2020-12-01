@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Fig. 2.14: form.html -->
+
+<!-- Form with a text field and hidden fields. -->
+
+<style>   
+.form{
+	margin:0 auto;
+	padding: 0 auto;
+	width:500px;
+	font-size: 16px;}
+
+input, textarea{
+	width: 100%;    
+  	padding: 12px;    
+  	border: 1px solid rgb(70, 68, 68);    
+  	border-radius: 4px;}    
+
+button{
+	background: #4BAF50;
+	border: 0px;
+	color: white;
+	
+	height: 30px;
+	margin: 0 auto;
+	text-transform: uppercase;}
+
+
+
+    
+button:hover{background-color: #45a049;}    
+    
+ 
+</style>
+
+
+
+
+
+
+
+
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Feedback Form</title>
+		<link rel = "stylesheet" type = "text/css" href = "stryle.css">
+	</head>
+
+<body>
+	<div class = "Feedback_Form"></div>
+
+	<div class = "form">
+		<form action="thxsubmit.html" method="post" target="_blank">
+
+			<h2>Feedback Form</h2>
+
+			<label for = "fname">First name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Please enter your first name.."><br><br>
+
+			<label for = "lname">Last name</label>
+			<input type="text" id="lname" name="lname" placeholder="Please enter your last name.."><br><br>
+
+			<label for = "email">Email address</label>
+			<input type="text" id="email" name="email" placeholder="Please enter your email address.."><br><br>
+
+			<label for = "comment">Comment</label>
+			<textarea id="comment" name="comment" placeholder="Your comment.." style="height:200px"></textarea><br><br>
+
+
+			<button type="Submit" formmethod="post" value="Submit" style="float: right">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
+	   		
+
+
+
+
+
+
+
+
+
+
