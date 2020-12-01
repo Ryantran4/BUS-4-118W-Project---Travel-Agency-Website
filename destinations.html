@@ -13,15 +13,17 @@
  
 
 <body> 
-<!---------TOP MENU---->
-<section id="nav-bar">
-  <div id="menuGoesHere"></div>
+
+  <!---------TOP MENU---->
+  <section id="nav-bar">
+    <div id="menuGoesHere"></div>
 </section>
-  <!-- load the top menu from a separate html file using jQuery .load 
-       and then set the class of the current option to active using JQuery .attr -->
+    <!-- load the top menu from a separate html file (topnav.html) 
+         using the jQuery .load function
+         and then set the class of the current option to active using JQuery .attr -->
 <script>
 $("#menuGoesHere").load("topnav.html", function(){
-$("#menuDestinations").attr("class", "active"); 
+  $("#menuHome").attr("class", "active"); 
 });
 </script>
 
