@@ -39,7 +39,7 @@ $("#menuGoesHere").load("topnav.html", function(){
     function makeReserv(){
       var name = $("#name").val();
       var stayDays = $("#stayDays").val();
-      var hotelName = $("#hotelName").val();
+      var hotelName = localStorage.getItem("hotelName");
       var roomType = $("#roomType").val();
       var stayCost = stayDays * roomType * 100 ;
     window.alert("RESERVATION CONFRIMATION for: \n" + 
