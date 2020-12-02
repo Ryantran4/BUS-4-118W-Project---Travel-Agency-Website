@@ -58,16 +58,20 @@ $("#menuGoesHere").load("topnav.html", function(){
       if (!arriveDate){
         $("#reserveForm #arriveDate").focus(); 
         window.alert("Please fill in Arrive Date")
-      }
+        }
      // check if depart date is blank and set the cursor back to it if blank
       if (!departDate){
         $("#reserveForm #departDate").focus(); 
         window.alert("Please fill in Depart Date")
-      }
-      var diff = new Date(departDate - arriveDate);
-      var stayDays  = diff/1000/60/60/24;
+        }
 
-      window.alert("stayDays = " + stayDays);
+      if (arriveDate && departDate) {
+        var arriveTime = new Date($("#arriveDate").val());
+        var departTime = new Date($("#departDate").val());
+        var diff = departTime.getTime() - arriveTime.getTime();
+        var stayDays  = diff/1000/60/60/24;
+         $("#reserveForm #stayDays").val(stayDays);
+      }
       //window.alert("arriveDate = " + arriveDate + "\n  departDate = " + departDate);
     }
   </script>
@@ -99,8 +103,12 @@ $("#menuGoesHere").load("topnav.html", function(){
         <label for="arriveDate" class="label"></i>Arrive Date:</label>
         <input type="date" id="arriveDate" class="box" name="arrive" required onchange="checkDates()"></p>
         <label for="departDate" class="label"></i>Depart Date:</label>
-        <input type="date" id="departDate" class="box" name="depart" required onchange="checkDates()"> </p> 
-        <label for="departDate" class="label"></i>Guests:</label>
+        <input type="date" id="departDate" class="box" name="depart" required onchange="checkDates()"> </p>
+
+        <label for="stayDays" class="label"></i>Stay Days:</label>
+        <input type="text" id="stayDays" class="box" name="stayDays" readonly value="0" size="1"> </p> 
+
+        <label for="number of Guests" class="label"></i>Guests:</label>
         <select id="numberOfGuests" class="box" name="NumberOfGuests" required>
           <option value="1">1</option>
           <option value="2" selected>2</option>
