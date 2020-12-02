@@ -1,0 +1,271 @@
+@import url('../css/fonts.css');
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+ /*-------- Theme color  ----------*/
+    --text-black: #2a3036;
+    --text-grey : #a09a9ada;
+    --text-white: #cad0d6;
+    --bg-color: #0c0c0c;
+    --white: #ffffff;
+    --blue: #1e98a3;
+
+ /*-------- Gradient color  ----------*/
+    --purple: linear-gradient(120deg, #7259ce 0%, #c7d6dd 100%);
+
+ /*-------- Theme font family ----------*/
+    --Abel: 'Abel', cursive;
+    --Epilogue: 'Epilogue', cursive;
+    --Oswald : 'Oswald', cursive;
+     --Roboto: 'Roboto', cursive;
+    --Texturina : 'Texturina', cursive;
+}
+
+/*-------- Global ----------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-black)
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+h1{
+    font-family: var(--Roboto);
+    font-size: 3.5rem;
+}
+
+h2{
+    font-family: var(--Roboto);
+    font-size: 2.1rem;
+}
+
+h3{
+    font-family: var(--Roboto);
+    font-size: 2.1rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    font-family: var(--Abel);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+    font-size: 1.4rem;
+}
+
+.container{
+    margin: 0 3vw;
+}
+
+.text-black{
+    color: var(--text-black);
+}
+
+p{
+    font-family: var(--Abel);
+    color: var(--text-black);
+    font-size: 1.8rem;
+}
+
+
+/*-------- Navaigation ----------*/
+
+.nav{
+    background: rgb(167, 166, 216);
+    padding: 0 3rem;
+    height: 0rem;
+    min-height: 12vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{    
+    justify-content: space-between;
+}
+
+.nav .nav-logo a{
+    font-size: 2.8rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Oswald);
+    font-size: 2.8rem;
+}
+
+/*-------- Main site  ----------*/
+
+main .site-title{
+    background: url('../images2/BackgroundRio.jpg');
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title h1, h2{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 2.1rem;
+    background: var(--purple);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-black);
+    background: transparent;
+    font-size: 3rem;
+}
+
+/*-------- Carousel Blog  ----------*/
+main .blog{
+    background: url('../images2/city.jpg');
+    background-repeat: repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%
+}
+
+main .blog .blog-post{
+    padding-top: 1rem;
+}
+
+main .blog-post .blog-data{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: 3rem 3rem;
+    box-shadow: 0 12px 20px rgba(3, 3, 3, 0.2);
+}
+
+main .blog-data .blog-title{
+    padding: 1rem 0;
+}
+
+main .blog-data .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--purple);
+    margin: .5rem;
+}
+
+main .blog-data span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+/*-------- Side content  ----------*/
+main .side-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+main .post-content{
+    width: 100%;
+}
+
+main .side-content .post-content > .post-image, .post-title{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+main .side-content .post-content > .post-image .post-info{
+    background: var(--purple);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 20vw;
+    border-radius: 3rem;
+}
+main .side-content .post-content > .post-image > div{
+    overflow: hidden;
+}
+main .side-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+main .side-content .post-content > .post-image .img:hover{
+    transform: scale(1.7);
+}
+main .side-content .post-content > .post-image .post-info span{
+    margin: 0 .7rem;
+}
+
+main .post-content .post-title a{
+    font-family: var(--Texturina);
+    font-size: 2.1rem;
+}
+
+.side-content .post-content .post-title .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--purple);
+}
+.side-content .pageN{
+    justify-content: center;
+    color: var(--text-black);
+    margin: 4rem 0;
+}
+
+.side-content .pageN a{
+    padding: .6rem 1.1rem;
+    border-radius: 3rem;
+    margin: 0 .4rem;
+    font-family: var(--Oswald);
+}
+
+.side-content .pageN .pages{
+    background: var(--text-black);
+    color: var(--white);
+}
+/*-------- Sidebar  ----------*/
+
+.side-content > .sidebar .tag-list{
+    font-family: var(--Epilogue);   
+}
+
+.side-content > .sidebar .tag-list .list-items{
+    background: var(--purple);
+    padding: .8rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------- Viewpoint less than 750px  ----------*/

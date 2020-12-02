@@ -1,0 +1,25 @@
+/*  font-family: Abel  */
+@font-face {
+    font-family: Abel;
+    src: url('../fonts/Abel/Abel-Regular.ttf');
+}
+/*  font-family: Epilogue  */
+@font-face {
+    font-family: Epilogue;
+    src: url('../fonts/Epilogue/static/Epilogue-Regular.ttf');
+}
+/*  font-family: Oswald  */
+@font-face {
+    font-family: Oswald;
+    src: url('../fonts/Oswald/static/Oswald-Regular.ttf');
+}
+/*  font-family: Roboto  */
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+/*  font-family: Texturina  */
+@font-face {
+    font-family: Texturina;
+    src: url('../fonts/Texturina/static/Texturina-Regular-opsz=36.ttf');
+}
