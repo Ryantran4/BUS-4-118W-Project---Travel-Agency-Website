@@ -4,7 +4,9 @@
 <title>Reserve your Hotel</title>
 <link rel="stylesheet" href="nav.css">
 <link rel="stylesheet" href="reserveHotel.css">
+<!--
 <link rel="stylesheet" href="style2.css">
+-->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -175,17 +177,15 @@ $("#menuGoesHere").load("topnav.html", function(){
 
 
 
-          <h1 class="heading">Credit Card Detail</h1>
+    <h1 class="heading">Credit Card Detail</h1>
+          <!-- Card Number -->
+          <label for="card-number">Credit Card </label>
+          <input type="text" id="card-number" class="label" name="card-number" size="20" placeholder=" XXXX XXXX XXXX XXXX"required></p>
 
   
-        <div class="form-body">
-          <!-- Card Number -->
-          <input type="text" class="card-number" placeholder="Card Number">
-  
           <!-- Date Field -->
-          <div class="date-field">
-            <div class="month">
-              <select name="Month">
+          <label for="date-field">Exp Month:</label>
+              <select name="date-field">
                 <option value="january">January</option>
                 <option value="february">February</option>
                 <option value="march">March</option>
@@ -199,35 +199,24 @@ $("#menuGoesHere").load("topnav.html", function(){
                 <option value="november">November</option>
                 <option value="december">December</option>
               </select>
-            </div>
-            <div class="year">
-              <select name="Year">
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
+            <label for="year-field">Exp Year:</label>
+            <select name="year-field">
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
               </select>
-            </div>
-          </div>
-  
+  <p></p>
           <!-- Card Verification Field -->
-          <div class="card-verification">
-            <div class="cvv-input">
-              <input type="text" placeholder="CVV">
-            </div>
-            <div class="cvv-details">
-              <p>3 or 4 digits usually found <br> on the signature strip</p>
-            </div>
-          </div>
-        </div>
+          <label for="cvv-input">CVV </label>
+              <input name="cvv-input" type="text" placeholder="XXX" size="5" >
+              <span class="cvv-details" style="text-align:left; font-size: 12px;" >3 or 4 digits usually found on the signature strip</span>
   
-
-     <input type="Submit" value ="Make Reservation">   
+              <p></p>
+     <input type="Submit" value ="Make Reservation">    
 </form>
 </div> 
   
