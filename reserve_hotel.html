@@ -42,21 +42,12 @@ $("#menuGoesHere").load("topnav.html", function(){
       var hotelName = $("#hotelName").val();
       var roomType = $("#roomType").val();
       var stayCost = stayDays * roomType * 100 ;
-        /*
-    var item01Qty = parseFloat(document.getElementById("item01").value);
-    var item02Qty = parseFloat(document.getElementById("item02").value);
-    var item03Qty = parseFloat(document.getElementById("item03").value);
-    var grossSales = item01Qty*50 + item02Qty*150 + item03Qty*250
-    var totalEarn = 750 + grossSales*0.0925
-    window.alert("Salesperson's earnings for \n" +
-                  "sale of $" + grossSales.toFixed(2) + " is $750 for week \n" +
-                  "plus 9.25% of commission is \n" +
-                  "$" + totalEarn.toFixed(2));
-                  */
     window.alert("RESERVATION CONFRIMATION for: \n" + 
                   "Name: " + name + "\n" +
                   "is staying " + stayDays + " days \n" +
                   "at the " + hotelName + "\n" +
+                  "arriving on " + $("#arriveDate").val() + " and \n" +
+                  "departing on " + $("#departDate").val() + " \n" +
                   "for a total of $" + stayCost.toFixed(2));
     }
     function checkDates(){
