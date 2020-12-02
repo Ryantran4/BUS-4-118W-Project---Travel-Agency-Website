@@ -34,9 +34,8 @@ $("#menuGoesHere").load("topnav.html", function(){
   $("#menuDestinations").attr("class", "active"); 
 });
 </script>
-
   <script type="text/javascript">
-  
+
     function makeReserv(){
         /*
     var item01Qty = parseFloat(document.getElementById("item01").value);
@@ -50,6 +49,26 @@ $("#menuGoesHere").load("topnav.html", function(){
                   "$" + totalEarn.toFixed(2));
                   */
     window.alert("This is where a receipt will go");
+    }
+    function checkDates(){
+      // check both arrive and deaprt dates using jQuery .val funtion
+      var arriveDate = $("#arriveDate").val();
+      var departDate = $("#departDate").val();
+     // check if arrive date is blank and set the cursor back to it if blank
+      if (!arriveDate){
+        $("#reserveForm #arriveDate").focus(); 
+        window.alert("Please fill in Arrive Date")
+      }
+     // check if depart date is blank and set the cursor back to it if blank
+      if (!departDate){
+        $("#reserveForm #departDate").focus(); 
+        window.alert("Please fill in Depart Date")
+      }
+      var diff = new Date(departDate - arriveDate);
+      var stayDays  = diff/1000/60/60/24;
+
+      window.alert("stayDays = " + stayDays);
+      //window.alert("arriveDate = " + arriveDate + "\n  departDate = " + departDate);
     }
   </script>
 
@@ -72,15 +91,15 @@ $("#menuGoesHere").load("topnav.html", function(){
         </script>
     </td></tr>
 </table>
-<form onsubmit="makeReserv()" class="form">
+<form id="reserveForm" onsubmit="makeReserv()" class="form">
   <!--  Reservation Information -->
 
   <div class="form-group">
     <h1 class="heading">Reservation Details</h1>
         <label for="arriveDate" class="label"></i>Arrive Date:</label>
-        <input type="date" id="arriveDate" class="box" name="arrive" required></p>
+        <input type="date" id="arriveDate" class="box" name="arrive" required onchange="checkDates()"></p>
         <label for="departDate" class="label"></i>Depart Date:</label>
-        <input type="date" id="departDate" class="box" name="depart" required> </p> 
+        <input type="date" id="departDate" class="box" name="depart" required onchange="checkDates()"> </p> 
         <label for="departDate" class="label"></i>Guests:</label>
         <select id="numberOfGuests" class="box" name="NumberOfGuests" required>
           <option value="1">1</option>
