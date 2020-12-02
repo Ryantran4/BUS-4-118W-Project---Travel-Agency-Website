@@ -2,8 +2,25 @@
     <head>
     <title>Signup Form </title>
     <link rel="stylesheet" href="stylesheet2.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
+        <!---------TOP MENU---->
+   <section id="nav-bar">
+    <div id="menuGoesHere"></div>
+    </section>
+    <!-- load the top menu from a separate html file (topnav.html) 
+         using the jQuery .load function
+         and then set the class of the current option to active using JQuery .attr -->
+     <script>
+       $("#menuGoesHere").load("topnav.html", function(){
+       $("#menuHome").attr("class", "active"); 
+       });
+</script>
     <div class="login-box">
     <div class="left-box">
     <h1>Sign Up</h1>
@@ -11,7 +28,7 @@
     <input type="email" class="input-box" placeholder="Email">
     <input type="password" class="input-box" placeholder="Enter password">
     <input type="password" class="input-box" placeholder="Renter password">
-    <a href="Homepage.html">
+    <a href="index.html">
         <input type="submit" class="submit-btn" placeholder="Sign Up"/>
     </div>
 
